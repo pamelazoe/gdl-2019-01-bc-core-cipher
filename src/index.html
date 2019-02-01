@@ -7,8 +7,15 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hola mundo!</h1>
+      <h1>Caesar Cipher</h1>
     </div>
+    <br>
+        <textarea id="input" name="p" rows="5" cols="50" placeholder="Introduce tu texto sin caracteres especiales ni números"></textarea>
+        <p> <textarea id="offset" name="offset" rows="2" cols="15" placeholder="Introduce el offset deseado"></textarea></p>
+        <p><input name="btnEn" value="Ícono Cifrar" id="encode" type="button">
+          <input name="btnDe" value="Ícono Descifrar" id="decode" type="button"></p>
+        <p>Output</p>
+        <textarea id="output" name="c" rows="4" cols="50" disabled="disabled"></textarea>  
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
