@@ -1,4 +1,4 @@
- window.cipher = {
+ /*window.cipher = {
    encode: (offset, string)=> {
 
      let plainString = [];
@@ -30,6 +30,7 @@
    }
    
  };
+ */
 
 // window.cipher = {
 //   encode: (offset, texto)=> {
@@ -81,7 +82,8 @@
 //   }
    
 // };
-/*window.cipher = {
+
+window.cipher = {
   encode: (offset, string)=> {
     let cipherStr="";
     let asciiStr = 0;
@@ -99,7 +101,7 @@
 		}
     // Agregar espacio: el caracter 32 en ASCII es equivalente a espacio
 		else if ((asciiStr >= 32) && (asciiStr <= 64)){
-        asciiStr = (((asciiStr - 32 + offset) % 26) + 3);
+        asciiStr = (((asciiStr - 32 + offset) % 33) + 32);
 		}
 		cipherStr += String.fromCharCode(asciiStr);
     }
@@ -122,8 +124,8 @@
         asciiStr = (((asciiStr - 122 - offset) % 26) + 122);
       }
       // Agregar espacio: el caracter 32 en ASCII es equivalente a espacio
-      else if ((asciiStr >= 33) && (asciiStr <= 64)){
-          asciiStr = (((asciiStr - 64 - offset) % 26) + 64);
+      else if ((asciiStr >= 32) && (asciiStr <= 64)){
+          asciiStr = (((asciiStr - 64 - offset) % 33) + 64);
       }
       cipherStr += String.fromCharCode(asciiStr);
       }
@@ -131,5 +133,5 @@
   }
    
 };
-*/
+
 
