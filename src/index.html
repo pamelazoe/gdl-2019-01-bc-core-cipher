@@ -2,20 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Zipherr</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="root">
-      <h1>Caesar Cipher</h1>
+       
+      <h1>Zipher</h1>
     </div>
     <br>
-        <textarea id="input" name="p" rows="5" cols="50" placeholder="Introduce tu texto sin caracteres especiales ni números"></textarea>
+        <textarea id="input" type="text" rows="5" cols="50" onblur="inputView()" placeholder="Introduce tu texto sin caracteres especiales ni números"></textarea>
         <p> <textarea id="offset" name="offset" rows="2" cols="15" placeholder="Introduce el offset deseado"></textarea></p>
         <p><input name="btnEn" value="Ícono Cifrar" id="encode" type="button">
           <input name="btnDe" value="Ícono Descifrar" id="decode" type="button"></p>
         <p>Output</p>
-        <textarea id="output" name="c" rows="4" cols="50" disabled="disabled"></textarea>  
+        <textarea id="inputView" rows="4" cols="50" readonly="readonly"></textarea>
+        <textarea id="output" rows="4" cols="50" readonly="readonly"></textarea>  
+        <button id="btnCopy">Copy </button>
+        <br>
+      <button type="button" id="nuevo">Nuevo</button>
+   
     <script src="cipher.js"></script>
     <script src="index.js"></script>
   </body>
