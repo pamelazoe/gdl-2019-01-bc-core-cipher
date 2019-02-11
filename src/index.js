@@ -1,36 +1,42 @@
-function reload(){
+//Función para refrescar la página
+function reload() {
   location.reload();
 }
-document.getElementById("nuevo").addEventListener("click", reload);
-
+document.getElementById("index").addEventListener("click", reload);
+//Limpia los campos para dar paso a una tarea nueva
+function clear() {
+  document.getElementById("input").value = "";
+  document.getElementById("offset").value = "";
+  document.getElementById("output").value = "";
+}
+document.getElementById("clear").addEventListener("click", clear);
+//Selecciona y copia el texto depositado en output mediante el botón de copiado
 let output = document.getElementById("output");
 let btnCopy = document.getElementById("btnCopy");
-btnCopy.onclick = function (){
+btnCopy.onclick = function() {
   output.select();
   document.execCommand("Copy");
 };
-
-function inputView(){
-  let input = document.getElementById("input");
-  let inputView = document.getElementById("inputView");
-  inputView.value = input.value;
+//Función para botón codificar
+function encode() {
+  let string = document.getElementById("input").value;
+  let offset = Number(document.getElementById("offset").value);
+  let output = window.cipher.encode(offset, string);
+  document.getElementById("output").innerHTML = output;
 }
-document.getElementById("inputView").addEventListener("click",inputView);
+document.getElementById("encode").addEventListener("click", encode);
+//Función para botón decodificar
+function decode() {
+  let string = document.getElementById("input").value;
+  let offset = Number(document.getElementById("offset").value);
+  let output = window.cipher.decode(offset, string);
+  document.getElementById("output").innerHTML = output;
+}
+document.getElementById("decode").addEventListener("click", decode);
 
-function encode(){
-    let string = document.getElementById("input").value;
-    let offset = Number(document.getElementById("offset").value);
-    let output = window.cipher.encode(offset,string);
-    document.getElementById("output").innerHTML = output;
-  }
-  document.getElementById("encode").addEventListener("click",encode);
-  
-  function decode(){
-    let string = document.getElementById("input").value;
-    let offset = Number(document.getElementById("offset").value);
-    let output = window.cipher.decode(offset,string);
-    document.getElementById("output").innerHTML = output;
-  }
-  document.getElementById("decode").addEventListener("click",decode);
-  
-  
+function start() {
+  document.getElementById("root").style.display = "block";
+  document.getElementById("container").style.display = "block";
+  document.getElementById("face").style.display = "none";
+}
+document.getElementById("start").addEventListener("click", start);

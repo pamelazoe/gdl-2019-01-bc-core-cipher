@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+#cipher {
+    margin: auto;
+    height: 110%;
+    left: 145%;
+    z-index: 0;
+    top: 34%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+#face {
+    font-family: 'Dosis', sans-serif;
+    position: absolute;
+    top: 38%;
+    left: 18%;
+    color: #9792DC;
+    height: 40%;
+    font-size: 110%;
+}
+
+.main {
+    color: #6E7BBD;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+}
+
+.sub {
+    color: lightslategrey;
+    font-family: 'Karla', sans-serif;
+    font-size: 100%;
+}
+
+#start {
+    left: 0%;
+    width: 35%;
+    height: 20%;
+    cursor: pointer;
+    border: none;
+    border: none;
+    background-color: #9792DC;
+    font-size: 110%;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+
+}
+
+body {
+    background-color: #3F3083;
+    height: 100%;
+    margin: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+#index {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    position: absolute;
+    height: 10%;
+    top: 17%;
+    left: 18%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 320%;
+    color: #9792DC;
+
+}
+
+#input {
+    left: 50%;
+    height: 9%;
+    width: 70%;
+    text-align: center;
+    padding: 1%;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-color: lightcoral;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 5%;
+    text-align: center;
+    resize: none;
+    font-size: 100%;
+    background:transparent;
+    
+
+}
+
+#offset {
+    height: 9%;
+    width: 20%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-color: lightcoral;
+    font-family: 'Rubik', sans-serif;
+    padding-top: 5%;
+    text-align: center;
+    resize: none;
+    font-size: 100%;
+    background:transparent;
+
+}
+
+#output {
+    width: 70%;
+    height: 15%;
+    border-color: lightcoral;
+    text-align: center;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    padding-top: 4%;
+    resize: none;
+    font-size: 100%;
+    background:transparent;
+    font-family: 'Rubik', sans-serif;
+
+
+}
+
+#clue {
+    width: 60%;
+    height: 9%;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+    border-color: lightgrey;
+    text-align: center;
+    align-items: center;
+    resize: none;
+    padding-top: 3%;
+}
+
+
+.square-container {
+    border: white;
+    text-align: center;
+    margin: 10%;
+}
+
+.square {
+    background-image: url("https://i.imgur.com/K07dAhW.jpg");
+    box-shadow: 5px 15px 70px #170B50;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    z-index: -1;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+
+}
+
+#container {
+    display: none;
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#encode,
+#decode {
+    cursor: pointer;
+    border: none;
+    width: 9%;
+    margin: 2%;
+    border: none;
+}
+
+#btnCopy {
+    cursor: pointer;
+    border: none;
+    width: 7%;
+    margin: 2%;
+
+}
+
+#clear {
+    cursor: pointer;
+    border: none;
+    width: 8%;
+}
+
+a:link {
+    color: lightseagreen;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightcoral;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightcoral;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:active {
+    color: lightsalmon;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+@media screen and (min-width:320px) and (max-width:1024px) {
+
+    #cipher {
+        margin: auto;
+        height: 80%;
+        z-index: 0;
+        top: 110%;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    }
+
+    #face {
+        font-family: 'Dosis', sans-serif;
+        font-size: 70%;
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        color: #9792DC;
+        text-align: center;
+    }
+
+    .main {
+        color: #6E7BBD;
+        font-family: 'Rubik', sans-serif;
+        font-size: 20px;
+    }
+
+    .sub {
+        color: #ABBBCD;
+        font-family: 'Karla', sans-serif;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #start {
+        width: 35%;
+        height: 20%;
+        cursor: pointer;
+        border: none;
+        background-color: #9792DC;
+        font-size: 110%;
+        color: white;
+        border-radius: 10px;
+        font-family: 'Karla', sans-serif;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    body {
+        background-color: #3F3083;
+        height: 100%;
+        margin: 0;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    }
+
+    #index {
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: transparent;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        top: 17%;
+        font-family: 'Dosis', sans-serif;
+        font-size: 40px;
+        color: #9792DC;
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+
+    }
+
+    #input {
+        left: 50%;
+        height: 20%;
+        width: 100%;
+        text-align: center;
+        padding: 1%;
+        border-left: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        border-color: lightgrey;
+        font-family: 'Rubik', sans-serif;
+        overflow: scroll;
+        padding-top: 5%;
+        text-align: center;
+        resize: none;
+        font-size: 100%;
+
+    }
+
+    #offset {
+        height: 9%;
+        width: 30%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1%;
+        border-left: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        border-color: lightgrey;
+        font-family: 'Rubik', sans-serif;
+        overflow: scroll;
+        padding-top: 5%;
+        text-align: center;
+        resize: none;
+        font-size: 100%;
+    }
+
+    #output {
+        width: 70%;
+        height: 70px;
+        border-color: lightgrey;
+        text-align: center;
+        overflow: scroll;
+        border-left: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        padding-top: 2%;
+        resize: none;
+        font-size: 100%;
+
+
+    }
+
+    #clue {
+        width: 60%;
+        height: 9%;
+        border-left: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        border-color: lightgrey;
+        text-align: center;
+        align-items: center;
+        resize: none;
+        padding-top: 3%;
+    }
+
+
+    .square-container {
+        border: white;
+        text-align: center;
+        margin: 10%;
+    }
+
+    .square {
+        background-image: url("https://i.imgur.com/K07dAhW.jpg");
+        box-shadow: 5px 15px 70px #170B50;
+        margin: auto;
+        height: 90%;
+        width: 95%;
+        z-index: -1;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+
+    }
+
+    #container {
+        position: absolute;
+        width: 60%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #encode,
+    #decode {
+        cursor: pointer;
+        border: none;
+        width: 25%;
+        margin: 5%;
+        border: none;
+    }
+
+    #btnCopy {
+        cursor: pointer;
+        border: none;
+        width: 22%;
+
+    }
+
+    #clear {
+        cursor: pointer;
+        border: none;
+        width: 22%;
+
+
+        /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
+    }
+
+}
