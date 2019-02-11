@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Zipherr</title>
+    <title>Zipher</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-       
-      <h1>Zipher</h1>
-    </div>
+</head>
+<div id="face">
+    <span class="main">
+        Cifra,<br>Descifra...
+    </span>
     <br>
-        <textarea id="input" type="text" rows="5" cols="50" onblur="inputView()" placeholder="Introduce tu texto sin caracteres especiales ni números"></textarea>
-        <p> <textarea id="offset" name="offset" rows="2" cols="15" placeholder="Introduce el offset deseado"></textarea></p>
-        <p><input name="btnEn" value="Ícono Cifrar" id="encode" type="button">
-          <input name="btnDe" value="Ícono Descifrar" id="decode" type="button"></p>
-        <p>Output</p>
-        <textarea id="inputView" rows="4" cols="50" readonly="readonly"></textarea>
-        <textarea id="output" rows="4" cols="50" readonly="readonly"></textarea>  
-        <button id="btnCopy">Copy </button>
+    <br>
+    <span class="sub">
+    Zipher es la herramienta que te permite codificar <br>el texto de tu elección mediante <a href="https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar"> cifrado César </a>, <br>así como agregar texto regular de acuerdo a tus necesidades.
+    </span>
+    <br>
+    <br>
+    <input type="button" value="Comenzar" id="start">
+    <img alt="cipherImage" id="cipher" src="https://s2.gifyu.com/images/zipher.gif">
+</div>
+
+<body>
+    <!-- Zipher -->
+    <div id="root">
+        <button id="index">
+            Zipher
+        </button>
+    </div>
+    <div id="container">
+
+        <textarea id="input" placeholder="Mensaje" title="Introduce tu mensaje aquí"></textarea> <textarea id="offset" placeholder="Key" title="Introduce un número"></textarea>
+        <input type="image" alt="enc" src="https://i.imgur.com/h1BjVga.png" id="encode" title="Codificar">
+        <input type="image" alt="dec" src="https://i.imgur.com/Nf11sG5.png" id="decode" title="Decodificar">
+        <p><textarea id="output" placeholder="Mensaje cifrado"></textarea>
+            <input type="image" alt="copy" src="https://i.imgur.com/ysMuANW.png" id="btnCopy" title="Copiar"></p>
         <br>
-      <button type="button" id="nuevo">Nuevo</button>
-   
+        <input type="image" alt="clean" src="https://i.imgur.com/at2ucWf.png" id="clear" title="Nuevo">
+
+    </div>
+    <div class="square"></div>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>
